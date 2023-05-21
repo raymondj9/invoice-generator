@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--color-primary: #149eca;
+  --color-primary-lite: #149cca48;
+}
+
+body {
+  background-color: rgb(228, 224, 224);
+}
