@@ -10,9 +10,9 @@ type TextAreaProps = {
   required?: boolean;
   readonly?: boolean;
   disabled?: boolean;
-  id: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  name: string;
+  id?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  name?: string;
   label?: string;
   errorMsg?: string;
 };

@@ -1,6 +1,4 @@
-import { ReactNode, useEffect, useState } from "react";
-import PrimaryButton from "../PrimaryButton";
-import SelectInputDropdown from "../Input/SelectInputDropdown";
+import { useState } from "react";
 import TextArea from "../Input/TextArea";
 import Section from "../Sections/Section";
 import Input from "../Input/Input";
@@ -46,8 +44,8 @@ const InvoiceForm = () => {
     setData({ ...data, items: newItems });
   };
 
-  const submit = (e: React.ChangeEvent<HTMLInputElement>) => {
-    e.preventDefault();
+  const submit = (e: any) => {
+    console.log(e)
   };
 
   const addItem = () => {
@@ -109,7 +107,7 @@ const InvoiceForm = () => {
             </div>
           </Section>
           <Section header={"Items"}>
-            {data?.items?.map((item, i) => (
+            {data?.items?.map((_, i) => (
               <div className="grid grid-cols-12 items-center gap-x-1.5 mb-6">
                 <div className="grid grid-cols-6 gap-x-4 col-span-11">
                   <Input
@@ -146,7 +144,7 @@ const InvoiceForm = () => {
                     id="price"
                     name="price"
                     type="number"
-                    value={data.items[i].price * data.items[i].quantity}
+                    value={(data.items[i].price).valueOf()}
                     label="Total"
                     className="block w-full"
                     handleChange={(e: any) => onHandleChange(e, i)}
@@ -180,15 +178,15 @@ const InvoiceForm = () => {
 
           <Section>
             <div className="lg:flex gap-4">
-              <TextArea label="Your Details" placeholder=""></TextArea>
-              <TextArea label="Bill to"></TextArea>
+              <TextArea label="Your Details" placeholder="" value="" cols={3} rows={4}></TextArea>
+              <TextArea label="Bill to" value="" cols={3} rows={4}></TextArea>
             </div>
           </Section>
 
           <Section>
             <div className="lg:flex gap-4">
-              <TextArea label="Payment terms"></TextArea>
-              <TextArea label="Payment details"></TextArea>
+              <TextArea label="Payment terms" value="" cols={3} rows={4}></TextArea>
+              <TextArea label="Payment details" value="" cols={3} rows={4}></TextArea>
             </div>
           </Section>
 

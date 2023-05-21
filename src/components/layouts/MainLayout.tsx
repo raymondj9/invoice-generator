@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import Footer from "../reusables/Footer/Footer";
 import Navbar from "../reusables/Navbar/Navbar";
@@ -18,7 +18,7 @@ const MainLayout = ({ children }: LayoutProps) => {
   }, []);
 
   return (
-    <Layout className="min-h-screen flex flex-col justify-between overflow-hidden">
+    <Layout className="min-h-screen flex flex-col justify-between overflow-hidden p-4">
       <div className="">
         <Navbar />
         <div className="content">{children}</div>

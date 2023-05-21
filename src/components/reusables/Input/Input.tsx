@@ -1,5 +1,5 @@
 import { IconName } from "@fortawesome/fontawesome-svg-core";
-import { useEffect, useRef, useState } from "react";
+import { useEffect } from "react";
 
 export default function TextInput({
   id,
@@ -76,13 +76,6 @@ export default function TextInput({
         </label>
       )}
       <div className="relative w-full">
-        {leftIcon && (
-          <Icon
-            size={16}
-            icon={leftIcon}
-            className="absolute bg-re-500 h-full left-0 rounded-l-lg px-2 text-sm cursor-pointer"
-          />
-        )}
         <input
           type={type}
           name={name}

@@ -7,9 +7,9 @@ const Navbar = () => {
 			className={`bg-base flex items-center justify-center lg:!pt-8 `}
 		>
 			<div className="items-center text-center m-wrapper">
-				{/* <NavLink to={'/'}>
-					App Name
-				</NavLink> */}
+				<NavLink to={'/'}>
+					{/* App Name */}
+				</NavLink>
 			</div>
 		</StyledNav>
 	);
