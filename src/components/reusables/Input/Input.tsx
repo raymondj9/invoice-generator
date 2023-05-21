@@ -4,6 +4,7 @@ import { useEffect } from "react";
 export default function TextInput({
   id,
   type = "text",
+  input_style = "normal" || "flat",
   name,
   value,
   className,
@@ -29,6 +30,7 @@ export default function TextInput({
 }: {
   id?: string;
   type: string;
+  input_style?: string;
   name: string;
   value: any;
   className?: string;
@@ -80,8 +82,7 @@ export default function TextInput({
           type={type}
           name={name}
           value={value}
-          className={`
-                       border-gray-200 py-2 bg-gray-200 rounded-md shadow-sm border border-solid border-gray px-3 w-full outline-none focus:highlight-bd`}
+          className={`py-2 rounded-md px-3 w-full outline-none focus:highlight-bd ${input_style == 'flat' ? 'border-b' : 'bg-gray-200 border-gray-200 border-gray shadow-sm border border-solid'}`}
           autoComplete={autoComplete}
           required={required}
           onChange={(e) => handleInputChange(e)}
