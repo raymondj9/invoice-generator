@@ -11,7 +11,7 @@ function Section({
 }) {
     return (
         <section
-            className={`relative border border-gray-400/20 px-5 py-6 rounded-lg ${className}`}
+            className={`relative border border-gray-400/20 px-3 md:px-5 py-6 rounded-lg ${className}`}
         >
             {header && (
                 <header className="absolute -top-3 font-bold left-5">

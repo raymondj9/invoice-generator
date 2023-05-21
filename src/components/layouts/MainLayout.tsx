@@ -29,6 +29,7 @@ const MainLayout = ({ children }: LayoutProps) => {
 };
 
 const Layout = styled.div`
+/* background-color: #fff; */
   & .content {
     // background: ;
     min-height: 60vh;

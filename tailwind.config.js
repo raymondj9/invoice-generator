@@ -7,7 +7,7 @@ export default {
         primary: "#149eca",
       },
       screens: {
-        xs: "0px",
+        xs: "350px",
       },
     },
   },

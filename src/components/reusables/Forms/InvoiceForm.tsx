@@ -130,7 +130,7 @@ const InvoiceForm = () => {
             </div>
           </Section>
           <Section header={"Date"}>
-            <div className="flex flex-col md:flex-row w-full gap-8">
+            <div className="flex flex-col xs:flex-row w-full gap-8">
               <Input
                 id="date"
                 name="date"
@@ -202,7 +202,7 @@ const InvoiceForm = () => {
 
                     <div className="col-span-1 flex items-center justify-center h-full">
                       <span
-                        className="bg-red-600 rounded-full h-6 w-6 mt-6 md:mt-5 md:h-11 md:w-11 flex items-center text-white"
+                        className="bg-red-600 rounded-full h-[20px] w-[20px] mt-6 md:mt-5 md:h-11 md:w-11 flex items-center text-white"
                         onClick={() => removeItem(i)}
                       >
                         <Icon icon="close" size={40} className="w-full" />
@@ -227,145 +227,143 @@ const InvoiceForm = () => {
             </div>
           </Section>
 
-          <Section>
-            <div className="flex flex-col md:flex-row gap-8 [&>*]:w-full">
-              <Section header="Your Details">
-                <div className="grid gap-4">
+          <div className="flex flex-col md:flex-row gap-8 [&>*]:w-full">
+            <Section header="Your Details">
+              <div className="grid gap-4">
+                <Input
+                  id="name"
+                  name="name"
+                  input_style="flat"
+                  type="text"
+                  value={data.your_details.name}
+                  className="block w-full"
+                  placeholder="Your Business/Freelancer Name "
+                  handleChange={(e: any) => onHandleDetailsChange(e, 1)}
+                />
+                <Input
+                  id="address"
+                  name="address"
+                  input_style="flat"
+                  type="text"
+                  value={data.your_details.address}
+                  className="block w-full"
+                  placeholder="Address"
+                  handleChange={(e: any) => onHandleDetailsChange(e, 1)}
+                />
+                <div className="flex gap-6">
                   <Input
-                    id="name"
-                    name="name"
+                    id="state"
+                    name="state"
                     input_style="flat"
                     type="text"
-                    value={data.your_details.name}
+                    value={data.your_details.state}
                     className="block w-full"
-                    placeholder="Your Business/Freelancer Name "
+                    placeholder="City, State"
                     handleChange={(e: any) => onHandleDetailsChange(e, 1)}
                   />
                   <Input
-                    id="address"
-                    name="address"
+                    id="country"
+                    name="country"
                     input_style="flat"
                     type="text"
-                    value={data.your_details.address}
+                    value={data.your_details.country}
                     className="block w-full"
-                    placeholder="Address"
-                    handleChange={(e: any) => onHandleDetailsChange(e, 1)}
-                  />
-                  <div className="flex gap-6">
-                    <Input
-                      id="state"
-                      name="state"
-                      input_style="flat"
-                      type="text"
-                      value={data.your_details.state}
-                      className="block w-full"
-                      placeholder="City, State"
-                      handleChange={(e: any) => onHandleDetailsChange(e, 1)}
-                    />
-                    <Input
-                      id="country"
-                      name="country"
-                      input_style="flat"
-                      type="text"
-                      value={data.your_details.country}
-                      className="block w-full"
-                      placeholder="Country"
-                      handleChange={(e: any) => onHandleDetailsChange(e, 1)}
-                    />
-                  </div>
-                  <Input
-                    id="zip_code"
-                    name="zip_code"
-                    input_style="flat"
-                    type="text"
-                    value={data.your_details.zip_code}
-                    className="block w-full"
-                    placeholder="Zip Code"
-                    handleChange={(e: any) => onHandleDetailsChange(e, 1)}
-                  />
-                  <Input
-                    id="phone"
-                    name="phone"
-                    input_style="flat"
-                    type="text"
-                    value={data.your_details.phone}
-                    className="block w-full"
-                    placeholder="Phone"
+                    placeholder="Country"
                     handleChange={(e: any) => onHandleDetailsChange(e, 1)}
                   />
                 </div>
-              </Section>
+                <Input
+                  id="zip_code"
+                  name="zip_code"
+                  input_style="flat"
+                  type="text"
+                  value={data.your_details.zip_code}
+                  className="block w-full"
+                  placeholder="Zip Code"
+                  handleChange={(e: any) => onHandleDetailsChange(e, 1)}
+                />
+                <Input
+                  id="phone"
+                  name="phone"
+                  input_style="flat"
+                  type="text"
+                  value={data.your_details.phone}
+                  className="block w-full"
+                  placeholder="Phone"
+                  handleChange={(e: any) => onHandleDetailsChange(e, 1)}
+                />
+              </div>
+            </Section>
 
-              <Section header="Client Details">
-                <div className="grid gap-4">
+            <Section header="Client Details">
+              <div className="grid gap-4">
+                <Input
+                  id="price"
+                  name="name"
+                  input_style="flat"
+                  type="text"
+                  value={data.bill_to.name}
+                  className="block w-full"
+                  placeholder="Client Business Name"
+                  handleChange={(e: any) => onHandleDetailsChange(e, 2)}
+                />
+                <Input
+                  id="price"
+                  name="address"
+                  input_style="flat"
+                  type="text"
+                  value={data.bill_to.address}
+                  className="block w-full"
+                  placeholder="Address"
+                  handleChange={(e: any) => onHandleDetailsChange(e, 2)}
+                />
+                <div className="flex gap-6">
                   <Input
-                    id="price"
-                    name="name"
+                    id="state"
+                    name="state"
                     input_style="flat"
                     type="text"
-                    value={data.bill_to.name}
+                    value={data.bill_to.state}
                     className="block w-full"
-                    placeholder="Client Business Name"
+                    placeholder="City, State"
                     handleChange={(e: any) => onHandleDetailsChange(e, 2)}
                   />
                   <Input
-                    id="price"
-                    name="address"
+                    id="country"
+                    name="country"
                     input_style="flat"
                     type="text"
-                    value={data.bill_to.address}
+                    value={data.bill_to.country}
                     className="block w-full"
-                    placeholder="Address"
-                    handleChange={(e: any) => onHandleDetailsChange(e, 2)}
-                  />
-                  <div className="flex gap-6">
-                    <Input
-                      id="state"
-                      name="state"
-                      input_style="flat"
-                      type="text"
-                      value={data.bill_to.state}
-                      className="block w-full"
-                      placeholder="City, State"
-                      handleChange={(e: any) => onHandleDetailsChange(e, 2)}
-                    />
-                    <Input
-                      id="country"
-                      name="country"
-                      input_style="flat"
-                      type="text"
-                      value={data.bill_to.country}
-                      className="block w-full"
-                      placeholder="Country"
-                      handleChange={(e: any) => onHandleDetailsChange(e, 2)}
-                    />
-                  </div>
-                  <Input
-                    id="zip_code"
-                    name="zip_code"
-                    input_style="flat"
-                    type="text"
-                    value={data.bill_to.zip_code}
-                    className="block w-full"
-                    placeholder="Zip Code"
-                    handleChange={(e: any) => onHandleDetailsChange(e, 2)}
-                  />
-                  <Input
-                    id="phone"
-                    name="phone"
-                    input_style="flat"
-                    type="text"
-                    value={data.bill_to.phone}
-                    className="block w-full"
-                    placeholder="Phone"
+                    placeholder="Country"
                     handleChange={(e: any) => onHandleDetailsChange(e, 2)}
                   />
                 </div>
-              </Section>
-              {/* <TextArea label="Your Details" placeholder="" value="" cols={3} rows={4}></TextArea> */}
-              {/* <TextArea label="Bill to" value="" cols={3} rows={4}></TextArea> */}
-            </div>
-          </Section>
+                <Input
+                  id="zip_code"
+                  name="zip_code"
+                  input_style="flat"
+                  type="text"
+                  value={data.bill_to.zip_code}
+                  className="block w-full"
+                  placeholder="Zip Code"
+                  handleChange={(e: any) => onHandleDetailsChange(e, 2)}
+                />
+                <Input
+                  id="phone"
+                  name="phone"
+                  input_style="flat"
+                  type="text"
+                  value={data.bill_to.phone}
+                  className="block w-full"
+                  placeholder="Phone"
+                  handleChange={(e: any) => onHandleDetailsChange(e, 2)}
+                />
+              </div>
+            </Section>
+            {/* <TextArea label="Your Details" placeholder="" value="" cols={3} rows={4}></TextArea> */}
+            {/* <TextArea label="Bill to" value="" cols={3} rows={4}></TextArea> */}
+          </div>
 
           <Section>
             <div className="flex flex-col md:flex-row gap-8">

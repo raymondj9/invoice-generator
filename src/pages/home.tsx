@@ -10,7 +10,7 @@ const Home = () => {
           <section className="">
             <div className="!pb-8">
               <div>
-                <h1 className="text-center font-thin text-5xl uppercase lg:tracking-widest mb-4">
+                <h1 className="text-center text-2xl lg:text-5xl uppercase mb-4">
                   Invoice Generator
                 </h1>
                 <div>

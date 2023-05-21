@@ -77,12 +77,12 @@ export default function TextInput({
           {label}
         </label>
       )}
-      <div className="relative w-full">
+      <div className={`relative w-full rounded-md ${input_style == 'flat' ? 'border-b' : 'bg-gray-200 border-gray-200 border-gray shadow-sm border border-solid'}`}>
         <input
           type={type}
           name={name}
           value={value}
-          className={`py-2 rounded-md px-3 w-full outline-none focus:highlight-bd ${input_style == 'flat' ? 'border-b' : 'bg-gray-200 border-gray-200 border-gray shadow-sm border border-solid'}`}
+          className={`py-2 px-3 w-full outline-none border-none block`}
           autoComplete={autoComplete}
           required={required}
           onChange={(e) => handleInputChange(e)}
