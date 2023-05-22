@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  h3 {
+      @apply text-sm font-bold mb-2;
+  }
+}
+
 :root {
 	--color-primary: #149eca;
   --color-primary-lite: #149cca48;
