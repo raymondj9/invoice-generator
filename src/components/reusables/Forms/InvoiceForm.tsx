@@ -105,12 +105,6 @@ const InvoiceForm = () => {
     setData({ ...data, items: newItems });
   };
 
-  const sumTotal = () => {
-    return data.items
-      .map((item) => parseInt(item.price) * item.quantity)
-      .reduce((prev, next) => prev + next);
-  };
-
   const handleGeneratePdf = () => {
     // reportTemplateRef?.current?.style.width = "100px";
     // const doc = new jsPDF({
