@@ -9,7 +9,7 @@
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "push": "git add . && git commit -m %1 && git push"
+    "push": "git add . && git commit -m 'some updates' && git push"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
